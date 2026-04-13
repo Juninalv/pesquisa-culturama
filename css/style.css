@@ -26,8 +26,9 @@ img {
     width: 100px;
 
 }
-header h1 {
+h1 {
     font-family: "Fjalla One", sans-serif;
+    text-align: center;
 
 }
 
@@ -35,6 +36,7 @@ form {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 20px;
+    margin-bottom: 100px;
 }
 
 fieldset {
@@ -53,6 +55,11 @@ legend {
 label {
     display: inline-block;
     margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 input, select, textarea {
@@ -76,3 +83,30 @@ input[type="color"] {
   width: 40px;
   padding: 0 5px;
 }
+
+input:invalid, select:invalid, textarea:invalid {
+    border-color: red;
+}
+
+input:valid, select:valid, textarea:valid {
+    border-color: green;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+button[type="reset"]:hover {
+    background-color: #ff0000;
+    color: white;
+    border: none;
