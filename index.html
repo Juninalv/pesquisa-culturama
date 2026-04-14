@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="culturama-favico.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans&display=swap" rel="stylesheet">
     <title>Pesquisa Culturama</title>
 </head>
 <body>
-    <header>
-        <h1>Pesquisa Online</h1>
+    <main>
+ <header>
+        <img src="img/logo-culturama.png" alt="logo culturama">
+        <h1>Pesquisa de Opinião</h1>
     </header>
     <section>
-        <form action="" method="get">
+        <form action="sucesso.html" method="get">
             <fieldset>
             <legend>Dados Pessoais</legend>
             
@@ -27,10 +34,10 @@
             <input id="userEmail" type="email" name="userEmail" required>
             <br>
             <label for="userPhone">Telefone:</label>
-            <input id="userPhone" type="tel" name="userPhone" pattern="[0-9]{11}" placeholder="DDD + número">
+            <input id="userPhone" type="tel" name="userPhone" pattern="[0-9]{11}" placeholder="DDD + número" aria-describedby="phoneHelp"> <small>Preencha com 11 dígios no formato DDD + número</small>
             <br>
             <label for="userImage">Upload de foto</label>
-            <input id="userImage" type="file" accept="image/*" name="userPhoto">
+            <input id="userImage" type="file" accept="image/*" name="userPhoto" aria-describedby="imageHelp"> <small id="imageHelp">Envie uma foto no formato PNG ou JPEG</small>
             <br>
             </fieldset>
             
@@ -156,12 +163,24 @@
 
                 <label for="comment">Escreva sua opinião:</label>
                 <textarea name="userComment" id="comment" placeholder="Digite sua opinião aqui..."></textarea>
+            </fieldset>
 
+            <fieldset>
+                <legend>Confirmações</legend>
+
+                <input type="checkbox" name="userLGPD" id="userLGPDTerm" value="accepted" required>
+                <label for="userLGPDTerm">Li e concordo com a Política de Privacidade</label><br>
+
+                <input type="checkbox" name="userGetResult" id="getResult" value="accepted">
+                <label for="getResult">Desejo receber os resultados da pesquisa por e-mail</label><br>
 
             </fieldset>
-            <button type="submit">Enviar</button>
+            <button type="submit" aria-label="Enviar formulário">Enviar</button>
+            <button type="reset" aria-label="Limpar formulário">Limpar</button>
         </form>
     </section>
     
+    </main>
+   
 </body>
 </html>
